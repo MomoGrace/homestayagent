@@ -66,3 +66,10 @@ img{max-width:100%;height:auto;display:block}
 .cta-box .btn + .btn {
   margin-top: 22px; /* 关键：拉开距离 */
 }
+.footer .disclosure-note {
+  background: #1a1a1a !important;
+  color: #e8e8e8 !important;
+  border-left: 4px solid #d4af37 !important;
+  padding: 12px 14px !important;
+  border-radius: 6px !important;
+}
