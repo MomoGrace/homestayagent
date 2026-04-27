@@ -44,3 +44,6 @@ img{max-width:100%;height:auto;display:block}
 .cta-box .btn-primary:last-child {
   margin-bottom: 0;
 }
+.cta-box .btn-primary + .btn-primary {
+  margin-top: 22px !important;
+}
