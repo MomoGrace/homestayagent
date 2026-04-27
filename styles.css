@@ -54,3 +54,15 @@ img{max-width:100%;height:auto;display:block}
 .cta-box a:last-child {
   margin-bottom: 0 !important;
 }
+.cta-box .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 18px 26px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.cta-box .btn + .btn {
+  margin-top: 22px; /* 关键：拉开距离 */
+}
