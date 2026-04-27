@@ -44,6 +44,13 @@ img{max-width:100%;height:auto;display:block}
 .cta-box .btn-primary:last-child {
   margin-bottom: 0;
 }
-.cta-box .btn-primary + .btn-primary {
-  margin-top: 22px !important;
+.cta-box a {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 22px 0 !important;
+  text-align: center !important;
+}
+
+.cta-box a:last-child {
+  margin-bottom: 0 !important;
 }
