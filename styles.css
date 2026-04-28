@@ -187,3 +187,21 @@ img{max-width:100%;height:auto;display:block}
 .deal-card .btn {
   color: #ffffff !important;
 }
+/* Align Check Ticket Deals buttons inside deal cards */
+#deals .deal-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 630px;
+}
+
+#deals .deal-card .price-note {
+  margin-top: auto;
+  margin-bottom: 14px;
+}
+
+#deals .deal-card .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
