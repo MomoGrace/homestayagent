@@ -160,3 +160,30 @@ img{max-width:100%;height:auto;display:block}
 .card .btn-primary * {
   color: #ffffff !important;
 }
+/* Correct fix for attraction deal cards */
+.deal-card {
+  background: #fffaf0;
+  color: #111111;
+}
+
+.deal-card h3 {
+  color: #111111 !important;
+  font-weight: 800;
+}
+
+.deal-card p {
+  color: #5b4a2a !important;
+  line-height: 1.6;
+}
+
+.deal-card .price-note {
+  color: #6b5528 !important;
+}
+
+.deal-card .tag {
+  color: #6b4a00 !important;
+}
+
+.deal-card .btn {
+  color: #ffffff !important;
+}
