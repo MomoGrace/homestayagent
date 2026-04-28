@@ -205,3 +205,17 @@ img{max-width:100%;height:auto;display:block}
   text-align: center;
   margin-top: 0;
 }
+/* Fix trust box spacing */
+.trust-box,
+.trust-list,
+.feature-list,
+.info-box {
+  padding: 24px !important;
+}
+
+.trust-box > div,
+.trust-list > div,
+.feature-list > div,
+.info-box > div {
+  padding: 16px 0 !important;
+}
