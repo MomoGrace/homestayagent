@@ -128,3 +128,35 @@ img{max-width:100%;height:auto;display:block}
 .card a.btn * {
   color: #ffffff !important;
 }
+/* Final fix: force attraction card text color */
+.deals-grid .card *,
+.attraction-grid .card *,
+.cards-grid .card *,
+.card * {
+  color: #111111 !important;
+}
+
+/* Description text softer */
+.deals-grid .card p,
+.attraction-grid .card p,
+.cards-grid .card p,
+.card p {
+  color: #5b4a2a !important;
+}
+
+/* Badge color */
+.card .badge,
+.card .pill,
+.card small {
+  color: #6b4a00 !important;
+}
+
+/* Button must stay white text */
+.card a,
+.card a *,
+.card .btn,
+.card .btn *,
+.card .btn-primary,
+.card .btn-primary * {
+  color: #ffffff !important;
+}
