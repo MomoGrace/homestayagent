@@ -1,6 +1,21 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "homestayagent.com"
+        }
+      ],
+      "destination": "https://www.homestayagent.com/:path*",
+      "permanent": true
+    }
+  ],
+
   "headers": [
     {
       "source": "/(.*)",
