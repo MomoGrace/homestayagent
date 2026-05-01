@@ -4,116 +4,772 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Malaysia Travel Guides | Homestay Agent Malaysia</title>
-  <meta name="description" content="Practical Malaysia travel guides for Kuala Lumpur, Genting Highlands, Langkawi, Melaka, family trips, and first-time visitors.">
-  <link rel="canonical" href="https://homestayagent.com/travel-guides.html">
+  <meta name="description" content="Browse Malaysia travel guides for Kuala Lumpur, Genting Highlands, Langkawi, Penang, Melaka, family trips, attractions, indoor activities, and first-time visitors.">
+  <link rel="canonical" href="https://homestayagent.com/travel-guides">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="google-site-verification" content="REPLACE_WITH_YOUR_GOOGLE_SEARCH_CONSOLE_CODE">
+  <meta name="google-site-verification" content="lxWaifkTIXMhVdkvrX06i23ri1g0_FArTf1Wwf_KCSM">
+
   <meta property="og:title" content="Malaysia Travel Guides | Homestay Agent Malaysia">
-  <meta property="og:description" content="Practical Malaysia travel guides for Kuala Lumpur, Genting Highlands, Langkawi, Melaka, family trips, and first-time visitors.">
+  <meta property="og:description" content="Practical Malaysia travel guides for Kuala Lumpur, Genting Highlands, Langkawi, Penang, Melaka, family trips, and attractions.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://homestayagent.com/travel-guides.html">
+  <meta property="og:url" content="https://homestayagent.com/travel-guides">
   <meta property="og:image" content="https://homestayagent.com/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    :root {
+      --bg: #0f0f0d;
+      --text: #151515;
+      --muted: #6f6255;
+      --gold: #c9a24d;
+      --cream: #fbf7ef;
+      --border: #eadfcb;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      background: #151515;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .brand span {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .brand strong {
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    .brand small {
+      font-size: 11px;
+      letter-spacing: .09em;
+      color: rgba(255,255,255,.72);
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.9);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: #111 !important;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 900 !important;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 18px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
+      background: #fff;
+      color: #111;
+      padding: 10px;
+      z-index: 999;
+    }
+
+    .page-hero {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(201,162,77,.20), transparent 34%),
+        linear-gradient(135deg, #0c0b08 0%, #15130f 100%);
+      color: #ffffff;
+      padding: 76px 0 70px;
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+      color: rgba(255,255,255,.7);
+    }
+
+    .breadcrumb a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .page-title h1 {
+      font-size: clamp(40px, 6vw, 76px);
+      line-height: .98;
+      letter-spacing: -.06em;
+      max-width: 880px;
+      margin: 0 0 20px;
+      font-weight: 900;
+    }
+
+    .page-title p {
+      max-width: 720px;
+      margin: 0;
+      color: rgba(255,255,255,.86);
+      font-size: 18px;
+    }
+
+    .section {
+      padding: 58px 0 78px;
+      background: #ffffff;
+    }
+
+    .search-box {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .search-box input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 16px 18px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .search-box button {
+      border: 0;
+      border-radius: 999px;
+      padding: 0 24px;
+      background: #111;
+      color: #fff;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .category-title {
+      margin: 42px 0 18px;
+    }
+
+    .category-title:first-of-type {
+      margin-top: 16px;
+    }
+
+    .category-title h2 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      letter-spacing: -.03em;
+    }
+
+    .category-title p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      box-shadow: 0 12px 30px rgba(40, 25, 10, .05);
+    }
+
+    .meta {
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: -.03em;
+      color: #111;
+    }
+
+    .card h3 a {
+      color: #111 !important;
+      text-decoration: none;
+    }
+
+    .card p {
+      margin: 0 0 20px;
+      color: #5b493a;
+      font-size: 15px;
+    }
+
+    .link {
+      margin-top: auto;
+      display: inline-flex;
+      color: #111 !important;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      transition: .2s ease;
+    }
+
+    .no-results {
+      display: none;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--cream);
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .site-footer {
+      background: #111;
+      color: rgba(255,255,255,.76);
+      padding: 38px 0;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,.82);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 76px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #181818;
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: 18px;
+        overflow: hidden;
+        padding: 10px;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 14px 12px;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-hero {
+        padding: 54px 0 52px;
+      }
+
+      .search-box {
+        flex-direction: column;
+      }
+
+      .search-box button {
+        padding: 15px 20px;
+      }
+
+      .card {
+        min-height: auto;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Malaysia Travel Guides",
+    "url": "https://homestayagent.com/travel-guides",
+    "numberOfItems": 30,
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"url":"https://homestayagent.com/best-things-to-do-kuala-lumpur","name":"Best Things to Do in Kuala Lumpur for First-Time Visitors"},
+      {"@type":"ListItem","position":2,"url":"https://homestayagent.com/best-indoor-attractions-kuala-lumpur","name":"Best Indoor Attractions in Kuala Lumpur"},
+      {"@type":"ListItem","position":3,"url":"https://homestayagent.com/kuala-lumpur-rainy-day-activities","name":"Kuala Lumpur Rainy Day Activities"},
+      {"@type":"ListItem","position":4,"url":"https://homestayagent.com/kuala-lumpur-3-day-itinerary","name":"Kuala Lumpur 3-Day Itinerary"},
+      {"@type":"ListItem","position":5,"url":"https://homestayagent.com/kuala-lumpur-with-kids","name":"Kuala Lumpur with Kids"},
+      {"@type":"ListItem","position":6,"url":"https://homestayagent.com/kuala-lumpur-travel-tips","name":"Kuala Lumpur Travel Tips"},
+      {"@type":"ListItem","position":7,"url":"https://homestayagent.com/klia-to-kuala-lumpur-city-guide","name":"KLIA to Kuala Lumpur City Guide"},
+      {"@type":"ListItem","position":8,"url":"https://homestayagent.com/kl-tower-vs-petronas","name":"KL Tower vs Petronas Twin Towers"},
+      {"@type":"ListItem","position":9,"url":"https://homestayagent.com/aquaria-klcc-review","name":"Aquaria KLCC Review"},
+      {"@type":"ListItem","position":10,"url":"https://homestayagent.com/aquaria-klcc-vs-zoo-negara","name":"Aquaria KLCC vs Zoo Negara"},
+      {"@type":"ListItem","position":11,"url":"https://homestayagent.com/batu-caves-guide","name":"Batu Caves Guide"},
+      {"@type":"ListItem","position":12,"url":"https://homestayagent.com/genting-highlands-day-trip","name":"Genting Highlands Day Trip Guide"},
+      {"@type":"ListItem","position":13,"url":"https://homestayagent.com/genting-skyworlds-review","name":"Genting SkyWorlds Review"},
+      {"@type":"ListItem","position":14,"url":"https://homestayagent.com/genting-highlands-with-kids","name":"Genting Highlands with Kids"},
+      {"@type":"ListItem","position":15,"url":"https://homestayagent.com/genting-vs-sunway-lagoon","name":"Genting vs Sunway Lagoon"},
+      {"@type":"ListItem","position":16,"url":"https://homestayagent.com/sunway-lagoon-guide","name":"Sunway Lagoon Guide"},
+      {"@type":"ListItem","position":17,"url":"https://homestayagent.com/best-theme-parks-malaysia","name":"Best Theme Parks in Malaysia"},
+      {"@type":"ListItem","position":18,"url":"https://homestayagent.com/best-family-attractions-malaysia","name":"Best Family Attractions in Malaysia"},
+      {"@type":"ListItem","position":19,"url":"https://homestayagent.com/malaysia-family-trip-itinerary-7-days","name":"Malaysia Family Trip Itinerary 7 Days"},
+      {"@type":"ListItem","position":20,"url":"https://homestayagent.com/malaysia-travel-budget-guide","name":"Malaysia Travel Budget Guide"},
+      {"@type":"ListItem","position":21,"url":"https://homestayagent.com/best-places-to-visit-malaysia-first-time","name":"Best Places to Visit Malaysia First Time"},
+      {"@type":"ListItem","position":22,"url":"https://homestayagent.com/where-to-stay-kuala-lumpur","name":"Where to Stay in Kuala Lumpur"},
+      {"@type":"ListItem","position":23,"url":"https://homestayagent.com/where-to-stay-penang","name":"Where to Stay in Penang"},
+      {"@type":"ListItem","position":24,"url":"https://homestayagent.com/langkawi-cable-car-skybridge","name":"Langkawi Cable Car & SkyBridge Guide"},
+      {"@type":"ListItem","position":25,"url":"https://homestayagent.com/langkawi-family-itinerary","name":"Langkawi Family Itinerary"},
+      {"@type":"ListItem","position":26,"url":"https://homestayagent.com/langkawi-vs-penang","name":"Langkawi vs Penang"},
+      {"@type":"ListItem","position":27,"url":"https://homestayagent.com/penang-family-itinerary","name":"Penang Family Itinerary"},
+      {"@type":"ListItem","position":28,"url":"https://homestayagent.com/melaka-weekend-itinerary","name":"Melaka Weekend Itinerary"},
+      {"@type":"ListItem","position":29,"url":"https://homestayagent.com/melaka-river-cruise-guide","name":"Melaka River Cruise Guide"},
+      {"@type":"ListItem","position":30,"url":"https://homestayagent.com/cameron-highlands-family-guide","name":"Cameron Highlands Family Guide"}
+    ]
+  }
+  </script>
 </head>
+
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html" aria-label="Homestay Agent Malaysia home">
-      <img src="logo.png" alt="Homestay Agent Malaysia logo">
-      <span><strong>Homestay Agent</strong><small>Malaysia Travel Guide</small></span>
-    </a>
-    <button class="mobile-toggle" data-menu-toggle aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav class="nav-links" data-nav-links aria-label="Main navigation">
-      <a href="travel-guides.html">Travel Guides</a>
-      <a href="things-to-do.html">Things To Do</a>
-      <a href="where-to-stay.html">Where To Stay</a>
-      <a href="family-travel.html">Family Trips</a>
-      <a class="nav-cta" href="things-to-do.html#deals">Explore Deals</a>
-    </nav>
-  </div>
-</header>
-<main id="main">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<section class="page-hero"><div class="container page-title"><div class="breadcrumb"><a href="index.html">Home</a> / Malaysia Travel Guides</div><h1>Malaysia Travel Guides</h1><p>Simple guides made for first-time visitors, families, and travelers comparing attractions before they book.</p></div></section>
-<section class="section"><div class="container">
-<form class="search-box" data-guide-search role="search" aria-label="Search travel guides"><input type="search" placeholder="Search guides, for example KL Tower, Genting, Langkawi..."><button type="button">Search</button></form>
-<div class="grid grid-3" style="margin-top:28px"><article class="card" data-guide-card>
-  <div class="meta">Kuala Lumpur</div>
-  <h3><a href="kl-tower-vs-petronas.html">KL Tower vs Petronas Twin Towers: Which One Should You Visit?</a></h3>
-  <p>A clear comparison for first-time visitors choosing between two iconic Kuala Lumpur experiences.</p>
-  <a class="link" href="kl-tower-vs-petronas.html">Read guide →</a>
-</article>
-<article class="card" data-guide-card>
-  <div class="meta">Family Travel</div>
-  <h3><a href="aquaria-klcc-review.html">Aquaria KLCC Review: Is It Worth Visiting with Kids?</a></h3>
-  <p>Family-friendly tips, visit duration, nearby attractions, and when Aquaria KLCC makes sense.</p>
-  <a class="link" href="aquaria-klcc-review.html">Read guide →</a>
-</article>
-<article class="card" data-guide-card>
-  <div class="meta">Kuala Lumpur</div>
-  <h3><a href="best-things-to-do-kuala-lumpur.html">Best Things to Do in Kuala Lumpur for First-Time Visitors</a></h3>
-  <p>A simple Kuala Lumpur starter guide covering views, food, indoor attractions, and day trips.</p>
-  <a class="link" href="best-things-to-do-kuala-lumpur.html">Read guide →</a>
-</article>
-<article class="card" data-guide-card>
-  <div class="meta">Short Trip</div>
-  <h3><a href="genting-highlands-day-trip.html">Genting Highlands Day Trip Guide from Kuala Lumpur</a></h3>
-  <p>How to plan a cool-weather day trip with theme parks, cable car ideas, and family tips.</p>
-  <a class="link" href="genting-highlands-day-trip.html">Read guide →</a>
-</article>
-<article class="card" data-guide-card>
-  <div class="meta">Attraction Guide</div>
-  <h3><a href="sunway-lagoon-guide.html">Sunway Lagoon Guide: Is It Worth Visiting?</a></h3>
-  <p>A practical guide for families and groups planning a theme park and water park day.</p>
-  <a class="link" href="sunway-lagoon-guide.html">Read guide →</a>
-</article>
-<article class="card" data-guide-card>
-  <div class="meta">Langkawi</div>
-  <h3><a href="langkawi-cable-car-skybridge.html">Langkawi Cable Car and SkyBridge Guide</a></h3>
-  <p>What to expect, who it is best for, and how to combine it with a Langkawi short trip.</p>
-  <a class="link" href="langkawi-cable-car-skybridge.html">Read guide →</a>
-</article></div>
-<div class="notice"><strong>Publishing plan:</strong> Add 2 to 3 new guides every week until the site has at least 20 useful articles. Start with Kuala Lumpur, then expand into Melaka, Penang, Langkawi, Genting Highlands, and Cameron Highlands.</div>
-</div></section>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Homestay Agent Malaysia home">
+        <img src="/logo.png" alt="Homestay Agent Malaysia logo">
+        <span>
+          <strong>Homestay Agent</strong>
+          <small>MALAYSIA TRAVEL GUIDE</small>
+        </span>
+      </a>
 
-</main>
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>Homestay Agent Malaysia</h3>
-      <p>Malaysia travel guides, stay-area tips, and attraction ideas for families, couples, and first-time visitors.</p>
-      <p class="disclosure-note">Some pages may contain affiliate links. We may earn a commission at no extra cost to you.</p>
+      <button class="mobile-toggle" data-menu-toggle aria-label="Open navigation" aria-expanded="false">☰</button>
+
+      <nav class="nav-links" data-nav-links aria-label="Main navigation">
+        <a href="/travel-guides">Travel Guides</a>
+        <a href="/things-to-do">Things To Do</a>
+        <a href="/where-to-stay">Where To Stay</a>
+        <a href="/family-travel">Family Trips</a>
+        <a class="nav-cta" href="/things-to-do#deals">Explore Deals</a>
+      </nav>
     </div>
-    <div>
-      <h3>Explore</h3>
-      <a href="travel-guides.html">Travel Guides</a>
-      <a href="things-to-do.html">Things To Do</a>
-      <a href="where-to-stay.html">Where To Stay</a>
-      <a href="family-travel.html">Family Travel</a>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-title">
+        <div class="breadcrumb"><a href="/">Home</a> / Malaysia Travel Guides</div>
+        <h1>Malaysia Travel Guides</h1>
+        <p>Simple guides made for first-time visitors, family trips, short holidays, rainy-day plans, attraction comparisons, and easy Malaysia itinerary planning.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form class="search-box" data-guide-search role="search" aria-label="Search travel guides">
+          <input type="search" placeholder="Search guides, for example KL Tower, Genting, Langkawi..." aria-label="Search guides">
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="no-results" data-no-results>No matching guide found. Try searching Kuala Lumpur, Genting, Langkawi, Penang, Melaka, family, or theme park.</div>
+
+        <div class="category-title">
+          <h2>Kuala Lumpur Guides</h2>
+          <p>Start here for KL attractions, indoor activities, family-friendly stops, airport transfer tips, and first-time visitor planning.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card" data-guide-card>
+            <div class="meta">Kuala Lumpur</div>
+            <h3><a href="/best-things-to-do-kuala-lumpur">Best Things to Do in Kuala Lumpur for First-Time Visitors</a></h3>
+            <p>A simple KL starter guide covering city views, indoor attractions, food areas, and day trip ideas.</p>
+            <a class="link" href="/best-things-to-do-kuala-lumpur">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Kuala Lumpur</div>
+            <h3><a href="/best-indoor-attractions-kuala-lumpur">Best Indoor Attractions in Kuala Lumpur</a></h3>
+            <p>Rainy-day and hot-weather indoor ideas in KL for families, couples, and first-time visitors.</p>
+            <a class="link" href="/best-indoor-attractions-kuala-lumpur">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Kuala Lumpur</div>
+            <h3><a href="/kuala-lumpur-rainy-day-activities">Kuala Lumpur Rainy Day Activities</a></h3>
+            <p>Easy indoor plans when the weather is wet, hot, or unsuitable for long outdoor walks.</p>
+            <a class="link" href="/kuala-lumpur-rainy-day-activities">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Itinerary</div>
+            <h3><a href="/kuala-lumpur-3-day-itinerary">Kuala Lumpur 3-Day Itinerary</a></h3>
+            <p>A practical three-day route for first-time visitors who want city views, culture, food, and family stops.</p>
+            <a class="link" href="/kuala-lumpur-3-day-itinerary">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Family Travel</div>
+            <h3><a href="/kuala-lumpur-with-kids">Kuala Lumpur with Kids</a></h3>
+            <p>Family-friendly KL ideas, easier attractions, indoor stops, and simple planning tips for parents.</p>
+            <a class="link" href="/kuala-lumpur-with-kids">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Travel Tips</div>
+            <h3><a href="/kuala-lumpur-travel-tips">Kuala Lumpur Travel Tips</a></h3>
+            <p>Useful KL tips for transport, timing, weather, attraction planning, and first-time visitor mistakes to avoid.</p>
+            <a class="link" href="/kuala-lumpur-travel-tips">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Airport Guide</div>
+            <h3><a href="/klia-to-kuala-lumpur-city-guide">KLIA to Kuala Lumpur City Guide</a></h3>
+            <p>Simple ways to get from KLIA to the city, including what to consider before choosing transport.</p>
+            <a class="link" href="/klia-to-kuala-lumpur-city-guide">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Comparison</div>
+            <h3><a href="/kl-tower-vs-petronas">KL Tower vs Petronas Twin Towers</a></h3>
+            <p>A clear comparison for visitors choosing between two iconic Kuala Lumpur experiences.</p>
+            <a class="link" href="/kl-tower-vs-petronas">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Family Travel</div>
+            <h3><a href="/aquaria-klcc-review">Aquaria KLCC Review</a></h3>
+            <p>Family-friendly tips, visit duration, nearby attractions, and when Aquaria KLCC makes sense.</p>
+            <a class="link" href="/aquaria-klcc-review">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Comparison</div>
+            <h3><a href="/aquaria-klcc-vs-zoo-negara">Aquaria KLCC vs Zoo Negara</a></h3>
+            <p>A simple comparison for families deciding between an indoor aquarium and an outdoor zoo visit.</p>
+            <a class="link" href="/aquaria-klcc-vs-zoo-negara">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Kuala Lumpur</div>
+            <h3><a href="/batu-caves-guide">Batu Caves Guide for First-Time Visitors</a></h3>
+            <p>Practical tips before visiting Batu Caves near KL, including timing, stairs, crowds, and expectations.</p>
+            <a class="link" href="/batu-caves-guide">Read guide →</a>
+          </article>
+        </div>
+
+        <div class="category-title">
+          <h2>Genting, Theme Parks & Family Attractions</h2>
+          <p>Plan theme park days, cooler-weather trips, family outings, and attraction comparisons around Malaysia.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card" data-guide-card>
+            <div class="meta">Short Trip</div>
+            <h3><a href="/genting-highlands-day-trip">Genting Highlands Day Trip Guide</a></h3>
+            <p>How to plan a cool-weather day trip with theme parks, cable car ideas, and family tips.</p>
+            <a class="link" href="/genting-highlands-day-trip">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Genting Highlands</div>
+            <h3><a href="/genting-skyworlds-review">Genting SkyWorlds Review</a></h3>
+            <p>A simple review-style guide for visitors planning a Genting SkyWorlds theme park trip.</p>
+            <a class="link" href="/genting-skyworlds-review">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Family Travel</div>
+            <h3><a href="/genting-highlands-with-kids">Genting Highlands with Kids</a></h3>
+            <p>Family-focused Genting ideas including weather, attractions, timing, and practical kid-friendly planning.</p>
+            <a class="link" href="/genting-highlands-with-kids">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Comparison</div>
+            <h3><a href="/genting-vs-sunway-lagoon">Genting vs Sunway Lagoon</a></h3>
+            <p>Compare two popular family trip ideas based on weather, activities, travel style, and group needs.</p>
+            <a class="link" href="/genting-vs-sunway-lagoon">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Attraction Guide</div>
+            <h3><a href="/sunway-lagoon-guide">Sunway Lagoon Guide</a></h3>
+            <p>A practical guide for families and groups planning a theme park and water park day.</p>
+            <a class="link" href="/sunway-lagoon-guide">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Theme Parks</div>
+            <h3><a href="/best-theme-parks-malaysia">Best Theme Parks in Malaysia</a></h3>
+            <p>A simple overview of Malaysia theme parks for families, groups, and first-time travellers.</p>
+            <a class="link" href="/best-theme-parks-malaysia">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Family Travel</div>
+            <h3><a href="/best-family-attractions-malaysia">Best Family Attractions in Malaysia</a></h3>
+            <p>Family-friendly attractions across Malaysia for easy trip planning with kids and mixed-age groups.</p>
+            <a class="link" href="/best-family-attractions-malaysia">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Family Itinerary</div>
+            <h3><a href="/malaysia-family-trip-itinerary-7-days">Malaysia Family Trip Itinerary 7 Days</a></h3>
+            <p>A one-week Malaysia family trip plan covering easy stops, attraction days, and practical pacing.</p>
+            <a class="link" href="/malaysia-family-trip-itinerary-7-days">Read guide →</a>
+          </article>
+        </div>
+
+        <div class="category-title">
+          <h2>Malaysia Destination Guides</h2>
+          <p>Helpful guides for Langkawi, Penang, Melaka, Cameron Highlands, and general Malaysia trip planning.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card" data-guide-card>
+            <div class="meta">Budget Guide</div>
+            <h3><a href="/malaysia-travel-budget-guide">Malaysia Travel Budget Guide</a></h3>
+            <p>A practical budget guide for travellers planning food, transport, attractions, and family trip costs.</p>
+            <a class="link" href="/malaysia-travel-budget-guide">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">First-Time Visitors</div>
+            <h3><a href="/best-places-to-visit-malaysia-first-time">Best Places to Visit Malaysia First Time</a></h3>
+            <p>Simple destination ideas for first-time visitors choosing where to go in Malaysia.</p>
+            <a class="link" href="/best-places-to-visit-malaysia-first-time">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Where To Stay</div>
+            <h3><a href="/where-to-stay-kuala-lumpur">Where to Stay in Kuala Lumpur</a></h3>
+            <p>Choose a KL area based on attractions, transport, shopping, family needs, and first-time convenience.</p>
+            <a class="link" href="/where-to-stay-kuala-lumpur">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Where To Stay</div>
+            <h3><a href="/where-to-stay-penang">Where to Stay in Penang</a></h3>
+            <p>Simple Penang stay area guide for food trips, families, beach stays, and first-time visitors.</p>
+            <a class="link" href="/where-to-stay-penang">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Langkawi</div>
+            <h3><a href="/langkawi-cable-car-skybridge">Langkawi Cable Car & SkyBridge Guide</a></h3>
+            <p>What to expect, who it is best for, and how to combine it with a Langkawi short trip.</p>
+            <a class="link" href="/langkawi-cable-car-skybridge">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Langkawi</div>
+            <h3><a href="/langkawi-family-itinerary">Langkawi Family Itinerary</a></h3>
+            <p>A relaxed family-friendly Langkawi plan with attractions, beaches, views, and easy pacing.</p>
+            <a class="link" href="/langkawi-family-itinerary">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Comparison</div>
+            <h3><a href="/langkawi-vs-penang">Langkawi vs Penang</a></h3>
+            <p>Compare island relaxation, food, culture, family activities, and travel style before choosing.</p>
+            <a class="link" href="/langkawi-vs-penang">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Penang</div>
+            <h3><a href="/penang-family-itinerary">Penang Family Itinerary</a></h3>
+            <p>A family-friendly Penang route with food, culture, attractions, and easy planning tips.</p>
+            <a class="link" href="/penang-family-itinerary">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Melaka</div>
+            <h3><a href="/melaka-weekend-itinerary">Melaka Weekend Itinerary</a></h3>
+            <p>A simple weekend route for Melaka, including walking areas, river views, food, and short-stay planning.</p>
+            <a class="link" href="/melaka-weekend-itinerary">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Melaka</div>
+            <h3><a href="/melaka-river-cruise-guide">Melaka River Cruise Guide</a></h3>
+            <p>What to know before taking the Melaka River Cruise, including timing, views, and who it suits.</p>
+            <a class="link" href="/melaka-river-cruise-guide">Read guide →</a>
+          </article>
+
+          <article class="card" data-guide-card>
+            <div class="meta">Cameron Highlands</div>
+            <h3><a href="/cameron-highlands-family-guide">Cameron Highlands Family Guide</a></h3>
+            <p>Cool-weather family trip ideas covering farms, tea views, short drives, and easy itinerary planning.</p>
+            <a class="link" href="/cameron-highlands-family-guide">Read guide →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Homestay Agent Malaysia</strong><br>
+        Practical Malaysia travel guides, attraction ideas, and stay tips.
+      </div>
+      <div class="footer-links">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/affiliate-disclosure">Affiliate Disclosure</a>
+      </div>
     </div>
-    <div>
-      <h3>Company</h3>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
-      <a href="sitemap.xml">Sitemap</a>
-    </div>
-    <div>
-      <h3>Legal</h3>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="terms.html">Terms</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">© <span data-year></span> Homestay Agent Malaysia. All rights reserved.</div>
-</footer>
-<script src="main.js"></script>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('[data-menu-toggle]');
+    const nav = document.querySelector('[data-nav-links]');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+
+    const form = document.querySelector('[data-guide-search]');
+    const input = form ? form.querySelector('input') : null;
+    const cards = Array.from(document.querySelectorAll('[data-guide-card]'));
+    const noResults = document.querySelector('[data-no-results]');
+
+    function filterGuides() {
+      const query = (input.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const match = !query || text.includes(query);
+        card.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+      });
+
+      if (noResults) {
+        noResults.style.display = visibleCount ? 'none' : 'block';
+      }
+    }
+
+    if (form && input) {
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        filterGuides();
+      });
+
+      input.addEventListener('input', filterGuides);
+    }
+  </script>
 </body>
 </html>
